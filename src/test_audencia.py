@@ -8,18 +8,27 @@ def test_leer_audencia_gh(audiencia:list[Audiencia]):
 
 def test_leer_audencia_mc(audiencia:list[Audiencia]):
     print('\n------------------------')
-    print('Audiencia de Master Chef')
+    print('Audiencia de MasterChef')
     print('------------------------')
     print(audiencia[:20])
 
+def test_calcula_ediciones_gh(audiencia:list[Audiencia]):
+    ediciones_gh = calcula_ediciones(audiencia)
+    print(f'\nNumero de ediciones de Gran Hermano: {ediciones_gh}')
+
+def test_calcula_ediciones_mc(audiencia:list[Audiencia]):
+    ediciones_mc = calcula_ediciones(audiencia)
+    print(f'Numero de ediciones de MasterChef: {ediciones_mc}')
 
 if __name__ == '__main__':
-    
+
     audiencias_gh = leer_audiencia('./data/GH.csv')
     audiencias_mc = leer_audiencia('./data/MasterChef.csv')
 
-    test_leer_audencia_gh(audiencias_gh)
-    test_leer_audencia_mc(audiencias_mc)
+    # test_leer_audencia_gh(audiencias_gh)
+    # test_leer_audencia_mc(audiencias_mc)
+    # test_calcula_ediciones_gh(audiencias_gh)
+    # test_calcula_ediciones_mc(audiencias_mc)
 
 
 

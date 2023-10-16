@@ -15,4 +15,11 @@ def leer_audiencia(archivo):
     
     return audiencia
 
+def calcula_ediciones(archivo):
+    ediciones = set()
+    for edicion, share in archivo:
+        ediciones.add(edicion)
+    
+    return len(ediciones)
+
 
