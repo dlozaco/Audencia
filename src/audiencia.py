@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 
 Audiencia = namedtuple('Audiencia', 'edicion, share')
 
-def leer_audiencia(archivo):
+def leer_audiencia(archivo)->list[Audiencia]:
     audiencia = list()
 
     with open(archivo, 'rt', encoding='utf-8') as f:
@@ -15,11 +15,19 @@ def leer_audiencia(archivo):
     
     return audiencia
 
-def calcula_ediciones(archivo):
+def calcula_ediciones(archivo:list[Audiencia])->int:
     ediciones = set()
     for edicion, share in archivo:
         ediciones.add(edicion)
     
     return len(ediciones)
+
+def filtrar_ediciones(archivo:list[Audiencia], e:int)->list:
+    e_list = list()
+    for edicion, share in archivo:
+        if edicion in e:
+            e_list.append(Audiencia(int(edicion), float(share)))
+
+    return e_list
 
 
