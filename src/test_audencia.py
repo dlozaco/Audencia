@@ -14,6 +14,7 @@ def test_leer_audencia_mc(audiencia:list[Audiencia]):
 
 
 if __name__ == '__main__':
+    
     audiencias_gh = leer_audiencia('./data/GH.csv')
     audiencias_mc = leer_audiencia('./data/MasterChef.csv')
 
