@@ -16,6 +16,7 @@ def leer_audiencia(archivo)->list[Audiencia]:
     return audiencia
 
 def calcula_ediciones(archivo:list[Audiencia])->int:
+    
     ediciones = set()
     for edicion, share in archivo:
         ediciones.add(edicion)
@@ -26,7 +27,7 @@ def filtrar_ediciones(archivo:list[Audiencia], e:int)->list:
     e_list = list()
     for edicion, share in archivo:
         if edicion in e:
-            e_list.append(Audiencia(int(edicion), float(share)))
+            e_list.append((int(edicion), float(share)))
 
     return e_list
 

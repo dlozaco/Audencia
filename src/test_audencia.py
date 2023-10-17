@@ -21,9 +21,14 @@ def test_calcula_ediciones_mc(audiencia:list[Audiencia]):
     print(f'Numero de ediciones de MasterChef: {ediciones_mc}')
 
 def test_filtrar_ediciones_gh(audiencia:list[Audiencia]):
-    audiencias_gh_123 = filtrar_ediciones(audiencias_gh, [1, 2, 3])
+    audiencias_gh_123 = filtrar_ediciones(audiencia, [1, 2, 3])
     print("Audiencias de las tres primeras ediciones del programa Gran Hermano:")
     print(audiencias_gh_123)
+
+def test_filtrar_ediciones_mc(audiencia:list[Audiencia]):
+    audiencias_mc_123 = filtrar_ediciones(audiencia, [1, 2, 3])
+    print("\nAudiencias de las tres primeras ediciones del programa MasterChef:")
+    print(audiencias_mc_123)
 
 if __name__ == '__main__':
 
@@ -35,6 +40,7 @@ if __name__ == '__main__':
     # test_calcula_ediciones_gh(audiencias_gh)
     # test_calcula_ediciones_mc(audiencias_mc)
     test_filtrar_ediciones_gh(audiencias_gh)
+    test_filtrar_ediciones_mc(audiencias_mc)
 
 
 
